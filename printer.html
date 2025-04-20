@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printers Rental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00AEDB;
+            padding: 20px;
+        }
+        .dark-mode {
+            background-color: #1f2937;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .not-found {
+            text-align: center;
+            font-size: 18px;
+            color: red;
+            display: none;
+        }
+        .container-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .printer-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .specs {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        .toggle-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .switch {
+        position: absolute;
+        right: 20px;
+        top: 23px;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+
+    /* The slider */
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    }
+
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    }
+
+    input:checked + .slider {
+    background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+    border-radius: 34px;
+    }
+
+    .slider.round:before {
+    border-radius: 50%;
+}
+        
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="search" class="search-input" placeholder="Search for a printer...">
+        <button class="search-btn" onclick="searchPrinter()">Search</button>
+    </div>
+
+    <p id="not-found" class="not-found">Printer not available</p>
+
+    <label class="switch" id="dark-mode-toggle" onclick="darkmode()">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    
+    <div class="container-wrapper" id="printer-list">
+        <div class="container" data-name="Canon imageRUNNER ADVANCE C5235">
+            <img class="printer-img" src="Printer1.webp" alt="Canon imageRUNNER ADVANCE C5235">
+            <h2>Canon imageRUNNER ADVANCE C5235</h2>
+            <p>A reliable multifunctional laser printer with high efficiency, perfect for small businesses and home offices. Delivers crisp prints at 35 ppm (B/W) and 30 ppm (Color) with advanced scanning and faxing capabilities.</p>
+            <button class="toggle-btn" onclick="toggleSpecs('specs2')">Read More</button>
+            <a  href="#"><button class="toggle-btn">Enquire</button> </a>
+            <div class="specs" id="specs2">
+                <h3>Product Specifications</h3>
+                <ul>
+                    <li><strong>Print Speed:</strong> 35 ppm (B/W), 30 ppm (Color)</li>
+                    <li><strong>Print Resolution:</strong> 1200 x 1200 dpi</li>
+                    <li><strong>Paper Capacity:</strong> Dual 550 Sheet Paper Drawer</li>
+                    <li><strong>Volume:</strong> 100,000 copies/month</li>
+                    <li><strong>Functions:</strong> Copier-Printer-Scan-Fax</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container" data-name="Canon imageRUNNER ADVANCE C5560i">
+            <img class="printer-img" src="Printer2.webp" alt="Canon imageRUNNER ADVANCE C5560i">
+            <h2>Canon imageRUNNER ADVANCE C5560i</h2>
+            <p>A high-performance color printer designed for heavy-duty office use. With 60 ppm print speed, 1TB HDD storage, and mobile/cloud printing support, it ensures fast and versatile document handling.</p>
+            <button class="toggle-btn" onclick="toggleSpecs('specs3')">Read More</button>
+            <a  href="#"><button class="toggle-btn">Enquire</button> </a>
+            <div class="specs" id="specs3">
+                <h3>Product Specifications</h3>
+                <ul>
+                    <li><strong>Print Speed:</strong> 60 ppm</li>
+                    <li><strong>Print Resolution:</strong> 1200 x 1200 dpi</li>
+                    <li><strong>Storage & Memory:</strong> 1TB HDD, 4GB RAM</li>
+                    <li><strong>Display size:</strong> 10.1" TFT LCD</li>
+                    <li><strong>Functions:</strong> Print, Copy, Scan, Send, Store</li>
+                    <li><strong>Support:</strong> Cloud and mobile printing supported</li>
+                </ul>
+            </div>
+        </div>
+  
+    <div class="container" data-name="Canon imageRUNNER ADVANCE C3326i Color Multifunctional Printer">
+        <img class="printer-img" src="printer4.png" alt="Another Printer">
+        <h2>Canon imageRUNNER ADVANCE C3326i Color Multifunctional Printer</h2>
+        <p>A compact yet powerful multifunction printer, offering duplex and booklet printing. Ideal for businesses needing reliable color prints at up to 26 ppm with high-resolution output.</p>
+        
+        <button class="toggle-btn" onclick="toggleSpecs('specs4')">Read More</button>
+        <a  href="#"><button class="toggle-btn">Enquire</button> </a>
+        
+        <div class="specs" id="specs4">
+            <h3>Product Specifications</h3>
+            <ul>
+                <li><strong>Print Speed:</strong> Up to 26 ppm (A4)</li>
+                <li><strong>Print Resolution:</strong>600 × 600, 1200 × 1200 dpi</li>
+                <li><strong>Copy Resolution:</strong> 600 × 600 dpi</li>
+                <li><strong>Functions:</strong>Duplex, Booklet Printing, Cloud Printing</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" data-name="BP-30M35/30M31/30M28 | Sharp Digital MFPs / Printers">
+        <img class="printer-img" src="Printer3.jpg" alt="Another Printer">
+        <h2>BP-30M35/30M31/30M28 | Sharp Digital MFPs / Printers</h2>
+        <p>A versatile Sharp digital MFP, known for sharp document clarity and efficient performance. With 28 ppm speed, 4GB RAM, and a 7” color touchscreen, it’s great for offices requiring network-ready, duplex printing.</p>
+        
+        <button class="toggle-btn" onclick="toggleSpecs('specs5')">Read More</button>
+        <a  href="#"><button class="toggle-btn">Enquire</button> </a>
+        
+        <div class="specs" id="specs5">
+            <h3>Product Specifications</h3>
+            <ul>
+                <li><strong>Print Speed:</strong>  28 ppm</li>
+                <li><strong>Print Resolution:</strong> 600 x 600 dpi</li>
+                <li><strong>Storage && Memory:</strong>: 4GB Ram/128GB SSD</li>
+                <li><strong>Connectivity:</strong>Network, Duplex, Reverse Automatic Document Feeder</li>
+                <li><strong>Features:</strong> Copy, Print, Scan, Duplex, 7” Color Touch Screen</li>
+            </ul>
+        </div>
+    </div>
+
+    
+     <div class="container" data-name="triumph-adler">
+        <img class="printer-img" src="Printer5.jpg" alt="Another Printer">
+        <h2>triumph-adler</h2>
+        <p>A fast, business-grade printer with 40 ppm print speed, USB, Ethernet, and Wi-Fi connectivity, and a high-capacity paper tray. Perfect for offices needing reliable, high-volume printing with advanced security features.</p>
+        
+        <button class="toggle-btn" onclick="toggleSpecs('specs6')">Read More</button>
+        <a  href="#"><button class="toggle-btn">Enquire</button> </a>
+        
+        <div class="specs" id="specs6">
+            <h3>Product Specifications</h3>
+            <ul>
+                <li><strong>Print Speed:</strong> Up to 40 pages per minute</li>
+                <li><strong>Print Resolution:</strong> 600 x 600 dpi</li>
+                <li><strong>Paper Handling:</strong> 250-sheet input tray, 100-sheet multipurpose tray</li>
+                <li><strong>Connectivity:</strong> USB, Ethernet, Wi-Fi, NFC</li>
+                <li><strong>Monthly Duty Cycle:</strong> Up to 80,000 pages</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggleSpecs(id) {
+            var specs = document.getElementById(id);
+            var button = document.querySelector("button[onclick=\"toggleSpecs('" + id + "')\"]");
+            if (specs.style.display === "none" || specs.style.display === "") {
+                specs.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                specs.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+        function searchPrinter() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let notFoundMessage = document.getElementById("not-found");
+            let printers = document.querySelectorAll(".container");
+            let found = false;
+            notFoundMessage.style.display = "none";
+
+            printers.forEach(printer => {
+                let printerName = printer.getAttribute("data-name").toLowerCase();
+                if (printerName.includes(input)) {
+                    printer.style.display = "block";
+                    found = true;
+                } else {
+                    printer.style.display = "none";
+                }
+            });
+
+            if (found) {
+                notFoundMessage.style.display = "none";
+            } else {
+                notFoundMessage.style.display = "block";
+            }
+        }
+
+        function darkmode(){
+            var element=document.body;
+            var darkModeToggle = document.getElementById("dark-mode-toggle").querySelector("input");
+            if (darkModeToggle.checked) {
+                element.classList.add("dark-mode");
+            } else {
+                element.classList.remove("dark-mode");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+    
+
+     
+      
