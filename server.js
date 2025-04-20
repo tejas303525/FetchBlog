@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5500;
 const cors = require('cors');
 
 
-app.use(cors());
-fetchBlog().catch(console.error)
 
+fetchBlog().catch(console.error)
+app.use(cors());
 cron.schedule('*/30 * * * *', () => {
     console.log('⏰ Running scheduled blog fetch...');
     fetchBlog().catch(err => console.error('Error updating blog:', err));

@@ -376,7 +376,7 @@
         <script src="js/main.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('http://localhost:5500/blog-data')
+                fetch('https://fetchblog.onrender.com/blog-data')
                     .then(response => response.json())
                     .then(data => {
                         const container = document.getElementById('blog-content');
