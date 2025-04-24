@@ -27,12 +27,14 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
+    var headerCarousel = $(".header-carousel");
+    headerCarousel.owlCarousel({
         animateOut: 'fadeOut',
         items: 1,
         margin: 0,
         stagePadding: 0,
         autoplay: true,
+        autoplayTimeout: 5000,  // slower slide change
         smartSpeed: 500,
         dots: true,
         loop: true,
@@ -42,6 +44,35 @@
             '<i class="bi bi-arrow-right"></i>'
         ],
     });
+
+    
+ // Pause carousel autoplay when interacting with model-viewer
+headerCarousel.find('model-viewer').each(function() {
+    var modelViewer = $(this);
+    modelViewer.on('pointerdown', function() {
+        headerCarousel.trigger('stop.owl.autoplay');
+    });
+    modelViewer.on('pointerup pointerleave', function() {
+        headerCarousel.trigger('play.owl.autoplay', [5000]);
+    });
+});
+
+// Prevent carousel slide changes while interacting with model-viewer
+headerCarousel.on('changed.owl.carousel', function(event) {
+    if (headerCarousel.hasClass('interaction-mode')) {
+        headerCarousel.trigger('to.owl.carousel', [event.item.index]);
+    }
+});
+
+headerCarousel.find('model-viewer').each(function() {
+    var modelViewer = $(this);
+    modelViewer.on('pointerdown', function() {
+        headerCarousel.addClass('interaction-mode');
+    });
+    modelViewer.on('pointerup pointerleave', function() {
+        headerCarousel.removeClass('interaction-mode');
+    });
+});
 
 
 

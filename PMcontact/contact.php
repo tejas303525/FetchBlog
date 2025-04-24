@@ -196,7 +196,7 @@ if(isset($_POST['send'])){
 <section class="contact">
 
    <!-- Back button -->
-   <a href="printing.php" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+   <a href="../printing.php" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
 
    <!-- Message display -->
    <?php if(!empty($message)): ?>

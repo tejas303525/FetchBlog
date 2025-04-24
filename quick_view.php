@@ -227,7 +227,7 @@ include 'components/wishlist_cart.php';
 
 
             <!-- Back button -->
-            <a href="printing.php" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+            <a href="../printing.php" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
 
             <section class="quick-view">
             <h1 class="heading">Product Quick View</h1>
@@ -259,14 +259,14 @@ include 'components/wishlist_cart.php';
                     <div class="content">
                         <div class="name"><?= $fetch_product['name']; ?></div>
                         <div class="flex">
-                        <div class="price">$<?= $fetch_product['price']; ?>/-</div>
+                       <!-- <div class="price">$<?= $fetch_product['price']; ?>/-</div>
                         <input type="number" name="qty" class="qty" min="1" max="99" value="1">
-                        </div>
+                        </div>-->
                         <div class="details"><?= $fetch_product['details']; ?></div>
-                        <div class="flex-btn">
-                       <input type="submit" value="Add to Cart" class="btn" name="add_to_cart">
-                        <!-- <input type="submit" name="add_to_wishlist" value="Add to Wishlist" class="option-btn"> -->
-                        </div>
+                       <!--<div class="flex-btn">
+                       <input type="submit" value="Add to Cart" class="btn" name="">
+                       <input type="submit" name="add_to_wishlist" value="Add to Wishlist" class="option-btn">
+                        </div>-->
                     </div>
                 </div>
             </form>

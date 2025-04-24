@@ -1,4 +1,53 @@
-.products {
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+}
+
+/* Popup Box */
+.whatsapp-popup {
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  width: 220px;
+  height: 90px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+.whatsapp-popup .popup-icon {
+  font-size: 30px;
+  color: #25D366;
+}
+
+.whatsapp-popup p {
+  margin: 0;
+  font-size: 14px;
+  flex: 1;
+}
+ .products {
    padding: 50px 0;
    background: #f9f9f9;
 }

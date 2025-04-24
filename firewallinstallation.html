@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/Logo1.png" type="image/png">
+  <title>Dora Infotech</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link rel="stylesheet" href="lib/animate/animate.min.css" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .roadmap-section {
+      padding: 70px 0;
+    }
+
+    .roadmap-title {
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      color: #0d6efd;
+      margin-bottom: 50px;
+    }
+
+    .why-choose {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .why-choose h4 {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .why-choose ul {
+      padding-left: 20px;
+    }
+
+    .why-choose li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .roadmap-line {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #0d6efd, #007bff);
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .roadmap-step {
+      background: #fff;
+      padding: 22px 20px;
+      margin-bottom: 25px;
+      border-left: 5px solid #0d6efd;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+      transition: 0.35s ease;
+    }
+
+    .roadmap-step:hover {
+      transform: translateX(4px);
+      background: #f1f3f5;
+    }
+
+    .roadmap-icon {
+      font-size: 26px;
+      margin-right: 16px;
+      color: #0d6efd;
+      flex-shrink: 0;
+    }
+
+    .roadmap-content h5 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0d6efd;
+      margin-bottom: 6px;
+    }
+
+    .roadmap-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 991px) {
+      .why-choose {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="row gx-0 align-items-center">
+        <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+          <div class="d-flex flex-wrap">
+            <div class="border-end border-primary pe-3">
+              <a href="https://maps.app.goo.gl/pXz5iFKWCu8dnTVd9" class="text-muted small"><i
+                  class="fas fa-map-marker-alt text-primary me-2"></i>Burdubai – Office-205,Mostafawi Business Centre,
+                Near Al Fahidi Metro – Dubai </a>
+            </div>
+            <div class="ps-3">
+              <a href="mailto:info@dorainfotech.com" class="text-muted small"><i
+                  class="fas fa-envelope text-primary me-2"></i>info@dorainfotech.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-flex justify-content-end">
+            <div class="d-flex border-end border-primary pe-3">
+              <a class="btn p-0 text-primary me-3"
+                href="https://www.facebook.com/people/Dora-Information-Technology-Dubai/61572403985242/#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/dorainfotechllc/"><i
+                  class="fab fa-instagram"></i></a>
+              <a class="btn p-0 text-primary me-0" href=" https://www.linkedin.com/company/dora-infotech"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <!-- Navbar Start -->
+  <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- Brand Logo -->
+            <a href="#" class="navbar-brand p-0">
+                <img src="img/verynewlogo.png" alt="Dora Infotech Logo" ">
+            </a>
+
+        <!-- Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-0 mx-lg-auto">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="blog.html" class="nav-item nav-link">Blog</a>
+
+            <!-- New Dropdown: IT Infrastructure -->
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">IT Infrastructure</a>
+              <div class="dropdown-menu">
+                  <a href="printing.php" class="dropdown-item">Printer Rental</a>
+                  <a href="itofficesetup.html" class="dropdown-item">New Office IT Setup</a>
+                  <a href="firewallinstallation.html" class="dropdown-item">Firewall Installation</a>
+                  <a href="telephonesystem.html" class="dropdown-item">Office Telephone System</a>
+                  <a href="structurecabling.html" class="dropdown-item">Structured Cabling</a>
+                  <a href="vpnsolution.html" class="dropdown-item">VPN Solution</a>
+              </div>
+          </div>
+
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+
+            <!-- Search & CTA Button -->
+            <div class="nav-btn px-3">
+              <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0">Get a Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Info -->
+        <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+          <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
+            data-wow-delay=".9s">
+            <i class="fa fa-phone-alt fa-2x"></i>
+            <div class="position-absolute" style="top: 7px; right: 12px;">
+              <span><i class="fa fa-comment-dots text-secondary"></i></span>
+            </div>
+          </a>
+          <div class="d-flex flex-column ms-3">
+            <span>Call to Our Experts</span>
+            <a href="tel:+97143414155"><span class="text-dark">Free: +971 43414155</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <div class="container roadmap-section" id="roadmapArea">
+    <h2 class="roadmap-title" data-aos="fade-down">🛡️ Firewall Installation Roadmap</h2>
+
+    <div class="row g-5 align-items-start">
+      <!-- Left side -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="why-choose">
+          <img src="img/firewallinstallation.jpg" alt="Firewall Setup Icon" class="mb-3 img-fluid"
+            style="max-width: 350px; height: 200PX;">
+          <h4>Why Choose Dora Infotech for Firewall Setup?</h4>
+          <ul>
+            <li>Expert firewall configuration & deployment</li>
+            <li>Secure VPN & remote access integration</li>
+            <li>Threat protection, filtering & reporting</li>
+            <li>High-availability & failover setups</li>
+            <li>24/7 monitoring & management support</li>
+          </ul>
+          <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#videoModal">🎥 Watch
+            Demo</button>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="col-lg-8 position-relative">
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-step" data-aos="fade-left">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Requirement Analysis</h5>
+            <p>Understand your office network structure, VPN requirements, and security policies.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="100">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Firewall Selection</h5>
+            <p>Select the ideal firewall model and license based on bandwidth, users, and features.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="200">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Network Design & Policy Planning</h5>
+            <p>Define zones, VPN tunnels, security policies, content filtering, and failover plans.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="300">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Physical Installation</h5>
+            <p>Rack mount, connect to the network backbone, and configure physical interfaces.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="400">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Configuration & VPN Setup</h5>
+            <p>Implement security policies, NAT rules, VPN tunnels between branches or countries, and port forwarding.
+            </p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="500">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Testing & Optimization</h5>
+            <p>Test firewall rules, VPN connections, internet failover, and remote management access.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-step" data-aos="fade-left" data-aos-delay="600">
+          <div class="roadmap-icon">➡️</div>
+          <div class="roadmap-content">
+            <h5>Monitoring & Handover</h5>
+            <p>Set up log reporting, threat monitoring, admin training, and documentation handover.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 overflow-hidden">
+        <div class="modal-header">
+          <h5 class="modal-title">Firewall Setup Demo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <video id="setupVideo" controls>
+              <source src="videos/firewall-setup.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="modal-footer text-end">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    const videoModal = document.getElementById('videoModal');
+    videoModal.addEventListener('hidden.bs.modal', () => {
+      const video = document.getElementById('setupVideo');
+      video.pause();
+      video.currentTime = 0;
+    });
+  </script>
+
+  <!-- Footer Start -->
+  <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-xl-9">
+          <div class="mb-5">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-6 col-xl-5">
+                <div class="footer-item">
+                  <a href="index.html" class="p-0">
+                    <h3 class="text-white"><img src="img/Logo1.png" alt="logo" height="45px"> Dora Infotech</h3>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                  </a>
+                  <p class="text-white mb-4"> We deliver superior IT solutions tailored to meet your unique needs,
+                    ensuring efficient results and sustainable growth.</p>
+                  <div class="footer-btn d-flex">
+                    <a class="btn btn-md-square rounded-circle me-3"
+                      href="https://www.facebook.com/people/Dora-Information-Technology-Dubai/61572403985242/#"><i
+                        class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-3"
+                      href="https://www.instagram.com/dorainfotechllc/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-0"
+                      href="https://www.linkedin.com/company/dora-infotech"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                  <h4 class="text-white mb-4">Useful Links</h4>
+                  <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                  <a href="#"><i class="fas fa-angle-right me-2"></i> Features</a>
+                  <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                  <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ's</a>
+                  <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blogs</a>
+                  <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="footer-item">
+                  <h4 class="mb-4 text-white">Instagram</h4>
+                  <div class="row g-3">
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/blog01.jpg" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/blog01.jpg" data-lightbox="footerInstagram-1" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/blog02.jfif" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/blog02.jfif" data-lightbox="footerInstagram-2" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/blog03.jpg" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/blog03.jpg" data-lightbox="footerInstagram-3" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/dmixcctv.jpeg" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/dmixcctv.jpeg" data-lightbox="footerInstagram-4" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/dmixserver.jpeg" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/dmixserver.jpeg" data-lightbox="footerInstagram-5" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="footer-instagram rounded">
+                        <img src="img/printerservice.jpg" class="img-fluid w-100" alt="">
+                        <div class="footer-search-icon">
+                          <a href="img/printerservice.jpg" data-lightbox="footerInstagram-6" class="my-auto"><i
+                              class="fas fa-link text-white"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="row g-4">
+                  <div class="col-lg-6 col-xl-4">
+                    <div class="d-flex">
+                      <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-white">Address</h4>
+                        <p class="mb-0">Burdubai – Office-205,Mostafawi Business Centre, Near Al Fahidi Metro Dubai.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-4">
+                    <div class="d-flex">
+                      <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                        <i class="fas fa-envelope fa-2x"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-white">Mail Us</h4>
+                        <p class="mb-0">info@dorainfotech.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-4">
+                    <div class="d-flex">
+                      <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                        <i class="fa fa-phone-alt fa-2x"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-white">Telephone</h4>
+                        <p class="mb-0">+971 43414155</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3">
+          <div class="footer-item">
+            <h4 class="text-white mb-4">Newsletter</h4>
+            <p class="text-white mb-3">
+              Subscribe for the latest updates, IT tips, and exclusive offers from Dora Infotech.
+            </p>
+
+            <div class="position-relative rounded-pill mb-4">
+              <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+              <button type="button"
+                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+            </div>
+            <div class="d-flex flex-shrink-0">
+              <div class="footer-btn">
+                <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                  <i class="fa fa-phone-alt fa-2x"></i>
+                  <div class="position-absolute" style="top: 2px; right: 12px;">
+                    <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                  </div>
+                </a>
+              </div>
+              <div class="d-flex flex-column ms-3 flex-shrink-0">
+                <span>Call to Our Experts</span>
+                <a href="tel:+ 0123 456 7890"><span class="text-white">Free: +971 43414155</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright py-4">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6 text-center text-md-end mb-md-0">
+          <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                class="fas fa-copyright text-light me-2"></i>DoraInfotech</a>, All right reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-start text-body">
+          <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+          <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+          <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+          Designed By <a class="border-bottom text-white" href="#">DoraInfotech Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
