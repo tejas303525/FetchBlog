@@ -3,7 +3,7 @@ const fs = require('fs');
 const https = require('https');
 const cron = require('node-cron');
 
-function fetchBlog(username = 'tejas303525', outputFile = 'blog.json') {
+function fetchBlog(username = 'dora.infotech1', outputFile = 'blog.json') {
     return new Promise((resolve, reject) => {
         if (!username) return reject(new Error('Username is required!'));
 

@@ -1,82 +1,26 @@
 [
   {
-    "title": "NEWS: The day when a “Security Snafu” sent millions of computers to BSOD",
+    "title": "Why Security Isn’t Just a Firewall Anymore",
     "category": "cybersecurity",
-    "author": "Prof.bubs",
-    "date": "Jul 21, 2024",
-    "excerpt": "\nSo as you all must have been aware of the huge tech outage that occurred on July 19th,2024 sent millions of computers spiraling to their Blue Screen of DOOM!. All the systems running Microsoft had th...",
-    "link": "https://tejas303525.medium.com/news-the-day-when-a-security-snafu-sent-millions-of-computers-to-bsod-da5abf0f9d45?source=rss-aabefe26c4b3------2"
+    "author": "Dora Infotech",
+    "date": "Apr 20, 2025",
+    "excerpt": "\n(And What You’re Probably Missing)\n🔥 Introduction\n“We’ve got a firewall, we’re safe.”-Famous last words.\nIn the early days of networking, that was a fair statement. A firewall stood between you and ...",
+    "link": "https://medium.com/@dora.infotech1/why-security-isnt-just-a-firewall-anymore-1250c889f736?source=rss-f720310f0ef6------2"
   },
   {
-    "title": "Mysterious X11: Linux shenanigans",
-    "category": "tech",
-    "author": "Prof.bubs",
-    "date": "May 23, 2024",
-    "excerpt": "\nWell well well!..\nhttps://medium.com/media/ad7d9cc3a9b0d2c38dc0cd817a6b0825/hrefit's been quite a long time since I wrote any medium blog post, And I wanted to start writing again not only about cybe...",
-    "link": "https://tejas303525.medium.com/mysterious-x11-linux-shenanigans-e280bb3a56f4?source=rss-aabefe26c4b3------2"
+    "title": "Breaking Down an IT AMC: What’s Covered, What’s Not &amp; What You Should Ask For",
+    "category": "rental",
+    "author": "Dora Infotech",
+    "date": "Apr 15, 2025",
+    "excerpt": "\nGetting into an AMC without reading the fine print is like ordering a burger and realizing the fries cost extra. What questions you should definitely be asking before signing on that contract\nWhat’s ...",
+    "link": "https://medium.com/@dora.infotech1/breaking-down-an-it-amc-whats-covered-what-s-not-what-you-should-ask-for-208d8d6cf65b?source=rss-f720310f0ef6------2"
   },
   {
-    "title": "PROTOSTAR WALKTHROUGH STACK-5",
-    "category": "stack6",
-    "author": "Prof.bubs",
-    "date": "Apr 10, 2022",
-    "excerpt": "\nHello hackers! hope you are all doing well. I know I took some time off from posting writeups because of how busy I got over time (jk I was juz laaazyyyy). Anyways this challenge is something that wa...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack-5-12cbfe97a8b6?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH STACK-6",
-    "category": "buffer-overflow",
-    "author": "Prof.bubs",
-    "date": "Dec 23, 2021",
-    "excerpt": "\nHello hackers! hope you are all doing well. It’s been a while since I posted something on my medium page. So without wasting any more of our precious time let us jump straight into hacking.\nhttps://e...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack-6-301fb31dc91d?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH STACK-4",
-    "category": "protostar-walkthrough",
-    "author": "Prof.bubs",
-    "date": "Sep 9, 2021",
-    "excerpt": "\nHello hackers! hope you are all doing well and good. Let us jump to stack4 of our protostar\nhttps://exploit.education/protostar/stack-four/This challenge seems quite similar to the previous one but t...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack-4-4c46bb652dbc?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH-STACK3",
-    "category": "protostar-walkthrough",
-    "author": "Prof.bubs",
-    "date": "Aug 29, 2021",
-    "excerpt": "\nHello hackers! hope you are all doing well and good. Let us jump to stack3 of our protostar\nhttps://exploit.education/protostar/stack-three/As we can see that our required output is inside the win() ...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack3-af2f3f2f12c8?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH-stack 2",
-    "category": "protostar",
-    "author": "Prof.bubs",
-    "date": "Aug 23, 2021",
-    "excerpt": "\nHello hackers! hope you are all doing well today. Now that we have done stack-2. We will now move onto stack3.\nSOURCE CODE:\nhttps://exploit.education/protostar/stack-two/On analysing we can immediate...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack-1-5f112e4291cc?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH-Stack-1",
-    "category": "protostar-walkthrough",
-    "author": "Prof.bubs",
-    "date": "Aug 18, 2021",
-    "excerpt": "\nsource:hacksland.netHello hackers! hope you are all doing well today. Now that we have done stack-0 and have a basic idea of how a stack frame is built, we can move on to stack-1.\nSOURCE CODE:\nsource...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack-1-8bf58a441cf7?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "PROTOSTAR WALKTHROUGH-Stack0",
-    "category": "stack0",
-    "author": "Prof.bubs",
-    "date": "Aug 16, 2021",
-    "excerpt": "\nsource:hacksland.netINSTALLATION:\nProtostar is a VM built specifically to train and test our knowledge of binary exploitation. It is highly recommended to try these challenges as it will help us have...",
-    "link": "https://tejas303525.medium.com/protostar-walkthrough-stack0-484abfebf1c1?source=rss-aabefe26c4b3------2"
-  },
-  {
-    "title": "HackTheBox — Knife",
-    "category": "htb-writeup",
-    "author": "Prof.bubs",
-    "date": "Jul 21, 2021",
-    "excerpt": "\n\nHackTheBox — Knife\nSource: google imagesknife is a new HTB machine based on Linux OS and it carries 20 points. It is a fairly easy machine that I was willing to give a shot. There are a few pre-requ...",
-    "link": "https://tejas303525.medium.com/hackthebox-knife-f650e6b7b4d0?source=rss-aabefe26c4b3------2"
+    "title": "Why Your Business Needs an IT AMC Before Things Break?",
+    "category": "amc",
+    "author": "Dora Infotech",
+    "date": "Apr 11, 2025",
+    "excerpt": "\nFirst and foremost question is…\nWHAT IS AN AMC CONTRACT?\nAn Annual Maintenance Contract (AMC) is your business’s tech insurance. It ensures regular maintenance, preventive checkups, and priority supp...",
+    "link": "https://medium.com/@dora.infotech1/why-your-business-needs-an-it-amc-before-things-break-9c7b0801f35c?source=rss-f720310f0ef6------2"
   }
 ]

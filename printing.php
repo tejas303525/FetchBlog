@@ -196,9 +196,8 @@ if (isset($_SESSION['user_id'])) {
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
       <a href="#" class="navbar-brand p-0">
-                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo" ">
-                </a>
-
+                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo" style= "height : 120px; margin-right: 20px">
+      </a>
         <!-- Toggler for Mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="fa fa-bars"></span>
