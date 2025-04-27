@@ -333,21 +333,20 @@
 .nav-bar {
     background: var(--bs-white);
     transition: 1s;
+    font-size: 20px;
 }
 
 .navbar-light .navbar-brand img {
-    max-height: 100px !important;
-    margin-right: 20px;
+    max-height: 100px;
     transition: .5s;
 }
 
 .nav-bar .navbar-light .navbar-brand img {
-    max-height: 100px !important;
-    margin-right: 20px;
+    max-height: 100px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-    padding: 0;
+    padding: 0px;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -420,16 +419,11 @@
         padding: 20px 0;
     }
 
-.navbar .nav-btn {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-/* Reduce margin-start on Get a Quote button to shorten distance */
-.navbar .nav-btn .btn.btn-primary.ms-3 {
-    margin-left: 0.5rem !important; /* reduced from 1rem */
-}
+    .navbar .nav-btn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
 
     .navbar .navbar-nav {
         width: 100%;
@@ -532,7 +526,14 @@
 
 @media (max-width: 767px) {
     .header-carousel .header-carousel-item {
-        height: 950px;
+        height: 1000px;
+    }
+    #mobile-model-viewer {
+        height: 300px !important;
+        width: 100% !important;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .header-carousel .owl-nav .owl-prev {

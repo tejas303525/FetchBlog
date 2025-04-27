@@ -87,11 +87,9 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <!-- Brand Logos Side by Side -->
-                <a href="#" class="navbar-brand p-0">
-                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo" ">
+                <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo 1">
                 </a>
-
-
                 <!-- Toggler for Mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -293,19 +291,19 @@
 
         .form-control:focus {
             box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-            border-color: #007bff;
+            border-color: #00aedb;
         }
 
         /* Button Styling */
         .btn-primary {
-            background-color: #007bff;
+            background-color: #00aedb;
             border: none;
             font-size: 1.1rem;
             border-radius: 0.5rem;
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: #00aedb;
         }
 
         /* Textarea Styling */

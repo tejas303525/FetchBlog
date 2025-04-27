@@ -195,9 +195,11 @@ if (isset($_SESSION['user_id'])) {
   <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="#" class="navbar-brand p-0">
-                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo" style= "height : 120px; margin-right: 20px">
-      </a>
+        <!-- Brand Logos Side by Side -->
+        <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                    <img src="img/verynewlogo.png" alt="Dora Infotech Logo 1" style="height: 100px;">
+                </a>
+
         <!-- Toggler for Mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="fa fa-bars"></span>
@@ -314,7 +316,7 @@ document.addEventListener("click", function() {
       </div>
 
       <div class="position-relative" style="overflow: hidden;">
-        <img class="img-fluid w-100 h-90" src="img/printing1.jpeg" style="object-fit: cover;"
+        <img class="img-fluid w-100 h-90" src="img/printing1.png" style="object-fit: cover;"
           alt="Managed Print Services">
         <div class="position-absolute top-50 start-50 translate-middle text-center text-white"></div>
       </div>

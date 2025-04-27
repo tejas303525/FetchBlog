@@ -71,6 +71,9 @@
                             <a class="btn p-0 text-primary me-0"
                                 href=" https://www.linkedin.com/company/dora-infotech"><i
                                     class="fab fa-linkedin-in"></i></a>
+                            <a class="btn p-0 text-primary ms-3"
+                                 href="https://x.com/dorainfotech1/status/992747280561295360"><i
+                                    class="fab fa-twitter"></i></a>
                         </div>
 
                     </div>
@@ -1241,6 +1244,7 @@ const adminPhone = '+971-50-987-6543'; // Replace with actual admin phone number
 let userName = "";
 let userEmail = "";
 let userWhatsApp = "";
+let userRequest = ""; // New variable to store purchase or service request details
 
 function toggleChat() {
     const chatBox = document.getElementById('chatBox');
@@ -1317,8 +1321,8 @@ function respondToMessage(msg) {
     } else if (userState === 'specifications' || userState === 'accessory') {
         appendMessage('bot', `Thanks for the details! Could you please provide your name?`);
         userState = 'collectName';
-        // Temporarily store the purchase details in userEmail to reuse in email later
-        userEmail = msg;
+        // Store the purchase details in userRequest instead of userEmail
+        userRequest = msg;
     } else if (userState === 'collectName') {
         userName = msg;
         appendMessage('bot', `Thanks, ${userName}! Please provide your email address.`);
@@ -1330,7 +1334,7 @@ function respondToMessage(msg) {
     } else if (userState === 'collectWhatsApp') {
         userWhatsApp = msg;
         appendMessage('bot', `Thank you for the information, ${userName}. We will get back to you soon.`);
-        sendEmail("purchase", userEmail, userName, userWhatsApp);
+        sendEmail("purchase", userRequest, userName, userWhatsApp);
         userState = ""; // Reset state after sending email
     } else if (msg.includes("2") && userState === "") {
         appendMessage('bot', `What kind of service are you looking for? <br> 1. System repair <br> 2. Accessory repair <br> 3. Network setup <br> 4. Printer service`);
@@ -1343,19 +1347,19 @@ function respondToMessage(msg) {
         if (msg.includes("1")) {
             appendMessage('bot', `Got it! You're interested in system repair. Please provide your name.`);
             userState = 'serviceCollectName';
-            userEmail = "System Repair";
+            userRequest = "System Repair";
         } else if (msg.includes("2")) {
             appendMessage('bot', `Got it! You're interested in accessory repair. Please provide your name.`);
             userState = 'serviceCollectName';
-            userEmail = "Accessory Repair";
+            userRequest = "Accessory Repair";
         } else if (msg.includes("3")) {
             appendMessage('bot', `Got it! You're interested in network setup services. Please provide your name.`);
             userState = 'serviceCollectName';
-            userEmail = "Network Setup";
+            userRequest = "Network Setup";
         } else if (msg.includes("4")) {
             appendMessage('bot', `Got it! You're interested in printer services. Please provide your name.`);
             userState = 'serviceCollectName';
-            userEmail = "Printer Service";
+            userRequest = "Printer Service";
         } else {
             appendMessage('bot', `Please enter a valid option (1-4) for the service you are interested in.`);
         }
@@ -1372,7 +1376,7 @@ function respondToMessage(msg) {
     } else if (userState === 'serviceCollectWhatsApp') {
         userWhatsApp = msg;
         appendMessage('bot', `Thank you for the information, ${userName}. We will get back to you soon.`);
-        sendEmail("service", userEmail, userName, userWhatsApp);
+        sendEmail("service", userRequest, userName, userWhatsApp);
         userState = ""; // Reset state after sending email
     } else if (msg.includes("address") || msg.includes("visit") || msg.includes("office")) {
         appendMessage('bot', `📍 Dora Infotech Office Address: Office 205, Mostafawi Business Centre Near Al Fahidi Metro Station, Bur Dubai, Dubai, United Arab Emirates`);
@@ -1384,17 +1388,17 @@ function respondToMessage(msg) {
     }
 }
 
-function sendEmail(type, request, name = "User", whatsapp = "") {
-    let subject = "";
-    let body = "";
-    
-    if (type === "purchase") {
-        subject = "Purchase Inquiry";
-        body = `Dear Team, ${name} is interested in purchasing: ${request}. WhatsApp Number: ${whatsapp} Regards ,${name}`;
-    } else if (type === "service") {
-        subject = "Service Inquiry";
-        body = `Dear Team, ${name} is requesting service for: ${request}. WhatsApp Number: ${whatsapp} Regards ,${name}`;
-    }
+    function sendEmail(type, request, name = "User", whatsapp = "") {
+        let subject = "";
+        let body = "";
+        
+        if (type === "purchase") {
+            subject = "Purchase Inquiry";
+            body = `Dear team, ${name} wishes to purchase: ${request}. These are the following contact details:\nName: ${name}\nEmail: ${request}\nWhatsApp Number: ${whatsapp}\nRegards, ${name}`;
+        } else if (type === "service") {
+            subject = "Service Inquiry";
+            body = `Dear team, ${name} wishes to request service for: ${request}. These are the following contact details:\nName: ${name}\nEmail: ${request}\nWhatsApp Number: ${whatsapp}\nRegards, ${name}`;
+        }
 
     const email = `mailto:presales@dorainfotech.com, support@dorainfotech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = email;
